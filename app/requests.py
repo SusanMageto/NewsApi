@@ -1,6 +1,5 @@
 import urllib.request,json
-from .models import Sources
-from .models import Headlines
+from .models import Sources,Headlines
 
 
 # Getting api key
