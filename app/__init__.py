@@ -12,8 +12,7 @@ def create_app(config_name):
 
     # Creating the app configurations
     app.config.from_object(config_options[config_name])
-    # app.config.from_object(DevConfig)
-    # app.config.from_pyfile("config.py")
+    
 
 
     # Initializing flask extensions
@@ -22,7 +21,7 @@ def create_app(config_name):
     # Registering the blueprint
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
-    
-
+    from.request import configue_request
+    configue_request(app)
     return app
   
