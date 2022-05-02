@@ -1,28 +1,22 @@
 class sources:
   '''
-  class that defines sources
+  class that defines Sources
   '''
-  def __init__(self,id,name,description,url,category,language,country):
-      self.id=id
-      self.name=name
-      self.description=description
-      self.url=url
-      self.category=category
-      self.language=language
-      self.country=country
+  def __init__(self,id, name,desc, url, country):
+      self.id = id
+      self.name = name
+      self.desc = desc
+      self.url = url
+      self.country = country
       
-class articles:
+class Headlines:
   '''
-  class that defines articles
+  class that defines headlines
   '''
-  def __init__(self,source,id,name,author,title,description,url,urlToImage,publishedAt,content):
-    self.source=source
-    self.id=id
-    self.name=name
-    self.author=author
-    self.title=title
-    self.description=description
-    self.url=url
-    self.urlToImage=urlToImage
-    self.publishedAt=publishedAt
-    self.content=content
+  def __init__(self,author,title,description,url,urlToImage,publishedAt):
+     self.author = author
+     self.title = title
+     self.description = description
+     self.url = url
+     self.publishedAt = publishedAt
+     self.urlToImage = urlToImage
