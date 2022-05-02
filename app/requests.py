@@ -31,5 +31,24 @@ def get_sources(category):
         if json_source_data['sources']:
             json_lib = json_source_data['sources']
             source_list = process_sources(json_lib)
+            
+def process_sources(sources):
+    '''
+    an 'interface' that filters data and inserts it into a class
+    '''
+    source_list = []
+    for one_source in sources:
+        id = one_source.get('id')
+        name = one_source.get('name')
+        desc = one_source.get('description')
+        url = one_source.get('url')
+        country = one_source.get('country')
+       
+
+        data_sources = Sources(id,name,desc,url,country)
+        source_list.append(data_sources)
+        # print('full_headlines_url')
+
+    return source_list
 
     return source_list
