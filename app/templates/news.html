@@ -1,0 +1,10 @@
+{% extends 'base.html'%} {% block styles%} {{ super() }} {% endblock %} {% block content %} 
+HEADLINES
+{% for article in articles %}
+Card image cap
+{{article.title}}
+{{article.description}}
+
+Published On: {{ article.publishedAt }}
+{% endfor %}
+{% endblock %}
