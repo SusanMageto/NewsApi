@@ -31,6 +31,7 @@ def get_sources(category):
         if json_source_data['sources']:
             json_lib = json_source_data['sources']
             source_list = process_sources(json_lib)
+    return source_list    
             
 def process_sources(sources):
     '''
@@ -48,7 +49,45 @@ def process_sources(sources):
         data_sources = Sources(id,name,desc,url,country)
         source_list.append(data_sources)
         # print('full_headlines_url')
-
     return source_list
 
-    return source_list
+def get_articles(id):
+    '''
+    a function that returns article_list irrespective of their category
+    '''
+    print('full_headlines_url')
+    full_headlines_url = headline_base_url.format(id, api_key)
+
+    with urllib.request.urlopen(full_headlines_url) as url:
+        articles = url.read()
+        json_articles = json.loads(articles)
+        print(json_articles)
+
+        articles_list = None
+
+        if json_articles['articles']:
+            article_lib = json_articles['articles']
+            articles_list = process_articles(article_lib)
+    return articles_list
+
+def process_articles(articles):
+    '''
+    this function acr=ts an an interfacce for data brought back by the api url as it pushes relevant data into our class and irrellevant data is left out
+    '''
+    articles_list = []
+    for article in articles:
+        author = article.get('author')
+        title = article.get('title')
+        description = article.get('description')
+        url = article.get('url')
+        urlToImage = article.get('urlToImage')
+        publishedAt = article.get('publishedAt')
+
+        article_data = Headlines(
+            author, title, description, url, urlToImage, publishedAt)
+
+        articles_list.append(article_data)
+
+    return articles_list
+
+    
