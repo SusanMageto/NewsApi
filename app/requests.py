@@ -14,7 +14,7 @@ def configure_request(app):
     api_key = app.config['NEWS_API_KEY']
     base_url=app.config['SOURCE_BASE_URL']
     headline_base_url=app.config['HEADLINES_BASE_URL']
-   
+    
 def get_sources(category):
     '''
     a function that returns sources with category passed in as a parameter

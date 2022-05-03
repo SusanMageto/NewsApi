@@ -1,15 +1,27 @@
 {% extends 'base.html'%} {% block styles%} {{ super() }} {% endblock %} {% block content %} 
-<h1>HEADLINES</h1>
+<button>HEADLINES</button>
 {% for article in articles %}
-<div class="card">
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="{{article.urlToImage}}" alt="...">
+      <div class="caption">
+        <h3>{{article.title}}</h3>
+        <p>{{article.description}}</p>
+        <p>{{ article.publishedAt }}</p>
+  
+        <p>...</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="card">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">{{article.title}}</h5>
     <p class="card-text">{{article.description}}</p>
-  </div>
-  <div class="card-footer">
-    <small class="text-muted">Published On: {{ article.publishedAt }}</small>
-  </div>
-</div>
+    <p class="card-text"><small class="text-muted">Published On: {{ article.publishedAt }}</small></p>
+  </div> -->
 {% endfor %}
 {% endblock %}

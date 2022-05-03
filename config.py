@@ -9,8 +9,8 @@ class Config:
     General configuration parent class
     """
     HEADLINES_BASE_URL = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
-    SOURCE_BASE_URL = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
-    API_KEY = os.environ.get('API_KEY')
+    SOURCE_BASE_URL ='https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
+    NEWS_API_KEY= "1663536f3bec419493c8319198a2c47a"
 
 class ProdConfig(Config):
     """

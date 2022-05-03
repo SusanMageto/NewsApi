@@ -1,18 +1,33 @@
-{% extends 'base.html'%} {% import 'macro.html' as macro %} {% block content %}
-Welcome to The News Article
-Africa's number one news providers
+{% extends 'base.html'%} {% import 'macro.html' as macro %} 
+{% block content %}
+Welcome to The News Article <br>
+Africa's number one news providers <br>
 GENERAL NEWS
-{{ macro.displaySources(general)}}
+<ul>
+  <li>{{ macro.displaySources(general)}}</li>
+</ul>
 SPORTS NEWS
-{{ macro.displaySources(sports)}}
+<ul>
+  <li>{{ macro.displaySources(sports)}}</li>
+</ul>
 BUSINESS NEWS
-{{ macro.displaySources(business)}}
+<ul>
+  <li>{{ macro.displaySources(business)}}</li>
+</ul>
 ENTERTAINMENT NEWS
-{{ macro.displaySources(entertainment)}}
+<ul>
+  <li>{{ macro.displaySources(entertainment)}}</li>
+</ul>
 SCIENCE NEWS
-{{ macro.displaySources(science)}}
+<ul>
+  <li>{{ macro.displaySources(science)}}</li>
+</ul>
 HEALTH NEWS
-{{ macro.displaySources(health)}}
+<ul>
+  <li>{{ macro.displaySources(health)}}</li>
+</ul>
 TECHNOLOGY NEWS
-{{ macro.displaySources(technology)}}
+<ul>
+  <li>{{ macro.displaySources(technology)}}</li>
+</ul>
 {% endblock %}

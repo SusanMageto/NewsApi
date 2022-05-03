@@ -8,7 +8,7 @@ class Sources:
       self.desc = desc
       self.url = url
       self.country = country
-      
+     
 class Headlines:
   '''
   class that defines headlines
