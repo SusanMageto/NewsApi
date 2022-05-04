@@ -1,32 +1,32 @@
 {% extends 'base.html'%} {% import 'macro.html' as macro %} 
 {% block content %}
-Welcome to The News Article <br>
-Africa's number one news providers <br>
-GENERAL NEWS
+<h2>The Daily Tribune </h2><br>
+<span><h4>Africa's number one news providers </h4></span><br>
+<h1>GENERAL NEWS</h1>
 <ul>
   <li>{{ macro.displaySources(general)}}</li>
 </ul>
-SPORTS NEWS
+<h1>SPORTS NEWS</h1>
 <ul>
   <li>{{ macro.displaySources(sports)}}</li>
 </ul>
-BUSINESS NEWS
+<h1>BUSINESS NEWS</h1>
 <ul>
   <li>{{ macro.displaySources(business)}}</li>
 </ul>
-ENTERTAINMENT NEWS
+<h1>ENTERTAINMENT NEWS</h1>
 <ul>
   <li>{{ macro.displaySources(entertainment)}}</li>
 </ul>
-SCIENCE NEWS
+<h1>SCIENCE NEWS</h1>
 <ul>
   <li>{{ macro.displaySources(science)}}</li>
 </ul>
-HEALTH NEWS
+<h1>HEALTH NEWS</h1>
 <ul>
   <li>{{ macro.displaySources(health)}}</li>
 </ul>
-TECHNOLOGY NEWS
+<h1>TECHNOLOGY NEWS</h1>
 <ul>
   <li>{{ macro.displaySources(technology)}}</li>
 </ul>
